@@ -1,6 +1,13 @@
 #!/bin/bash
+#
+# This script shows how to send a libnotify message
+# to a specific user.
+#
+# It looks for a process that was started by the user and is connected to dbus.
 
+# process to determine DBUS_SESSION_BUS_ADDRESS
 USER_DBUS_PROCESS_NAME="gconfd-2"
+
 USER="makubi"
 NOTIFY_SEND_BIN="/usr/bin/notify-send"
 
