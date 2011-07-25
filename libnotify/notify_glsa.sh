@@ -5,6 +5,17 @@
 #	2. checks all GLSA
 #	3. sends a libnotify message via 'notify-send'
 #		to inform the user about GLSA status
+#
+# You need to allow the execution of two commands using sudo
+#	/usr/bin/emerge --sync --quiet
+#	/usr/bin/glsa-check -t all
+#
+# -- e.g.
+#	Cmnd_Alias	SYNC_PORTAGE = /usr/bin/emerge --sync --quiet
+#	Cmnd_Alias	CHECK_GLAS = /usr/bin/glsa-check -t all
+#	
+#	myuser ALL=NOPASSWD: SYNC_PORTAGE_TREE
+#	myuser ALL=NOPASSWD: CHECK_GLSAS
 
 # sync portage tree
 sudo emerge --sync --quiet
