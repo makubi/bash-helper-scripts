@@ -7,7 +7,7 @@
 #		to inform the user about GLSA status
 
 # sync portage tree
-sudo emerge --sync 2&>1 /dev/null
+sudo emerge --sync --quiet
 
 NOTIFY_BIN="/usr/bin/notify-send"
 CHECK_OK_STRING="This system is not affected by any of the listed GLSAs"
